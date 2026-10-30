@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guilherme Firmino · Portfólio</title>
+  <meta name="description" content="Portfólio de Guilherme Firmino, estudante de Desenvolvimento de Sistemas. Projetos em Python, visão computacional, automação, QA e web.">
+  <meta property="og:title" content="Guilherme Firmino · Portfólio">
+  <meta property="og:description" content="Projetos em Python, visão computacional, automação, QA e web.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0c10">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#topo" class="logo">GF<span>.</span></a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag mono">// olá, mundo</p>
+        <h1>Guilherme<br>Firmino</h1>
+        <p class="role mono"><span id="typed"></span><span class="caret">_</span></p>
+        <p class="lead">Estudante de Desenvolvimento de Sistemas na EEEP Maria Célia Pinheiro Falcão, em Pereiro, Ceará. Aprendo construindo: visão computacional, automação, testes de segurança e web.</p>
+        <div class="cta">
+          <a href="#projetos" class="btn primary">Ver projetos</a>
+          <a href="https://www.linkedin.com/in/guilherme-firmino-2a240137a/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+          <a href="https://github.com/Guilherme-Firmino" target="_blank" rel="noopener" class="btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-eyes" title="Clique para piscar">
+        <div class="face">
+          <div class="eye"><div class="iris"><div class="pupil"></div><div class="glint"></div></div><div class="lid top"></div><div class="lid bottom"></div></div>
+          <div class="eye"><div class="iris"><div class="pupil"></div><div class="glint"></div></div><div class="lid top"></div><div class="lid bottom"></div></div>
+        </div>
+        <p class="mono hint">mova o mouse · clique para piscar</p>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="stats">
+      <div class="stat"><strong data-count="5">0</strong><span>projetos no GitHub</span></div>
+      <div class="stat"><strong data-count="100">0</strong><span>horas de monitoria</span></div>
+      <div class="stat"><strong data-count="54" data-suffix=" mil">0</strong><span>visualizações no projeto de visão computacional</span></div>
+      <div class="stat"><strong data-count="500" data-prefix="+">0</strong><span>seguidores no LinkedIn</span></div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section about">
+      <div class="photo reveal">
+        <img src="foto.jpg" alt="Foto de Guilherme Firmino" width="800" height="800" loading="lazy">
+        <span class="photo-tag mono">Pereiro · CE</span>
+      </div>
+      <div class="about-text">
+        <div class="section-head">
+          <p class="tag mono">01 · sobre mim</p>
+          <h2>Sonhos e metas</h2>
+        </div>
+        <p class="about-lead">Meu sonho é me tornar um grande programador, alguém capaz de transformar ideias em soluções que fazem diferença na vida das pessoas.</p>
+        <p class="sub">Gosto de aprender coisas novas, principalmente quando parecem difíceis no começo. Cada projeto que faço é uma chance de entender algo que eu ainda não sabia. Ainda estou estudando e busco melhorar um pouco a cada dia.</p>
+        <ul class="goals">
+          <li class="reveal"><span class="mono">meta 01</span>Virar um grande programador</li>
+          <li class="reveal"><span class="mono">meta 02</span>Aprender sempre algo novo</li>
+          <li class="reveal"><span class="mono">meta 03</span>Ser melhor hoje do que ontem</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
+      <div class="section-head">
+        <p class="tag mono">02 · projetos</p>
+        <h2>O que eu já construí</h2>
+      </div>
+      <div class="filters" role="tablist">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="python">Python</button>
+        <button class="chip" data-filter="visao">Visão computacional</button>
+        <button class="chip" data-filter="seguranca">Segurança e QA</button>
+        <button class="chip" data-filter="web">Web</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section id="terminal" class="section">
+      <div class="section-head">
+        <p class="tag mono">03 · experimente</p>
+        <h2>Teste o Aplicativo Básico aqui mesmo</h2>
+        <p class="sub">Uma versão para navegador do meu programa de terminal em Python. Digite <code>ajuda</code> para começar.</p>
+      </div>
+      <div class="term" id="term">
+        <div class="term-bar"><i></i><i></i><i></i><span class="mono">aplicativo_basico.py</span></div>
+        <div class="term-body mono" id="termOut"></div>
+        <form class="term-input mono" id="termForm" autocomplete="off">
+          <span class="prompt">&gt;&gt;&gt;</span>
+          <input id="termIn" aria-label="Comando do terminal" spellcheck="false">
+        </form>
+      </div>
+    </section>
+
+    <!-- TRAJETÓRIA -->
+    <section id="trajetoria" class="section">
+      <div class="section-head">
+        <p class="tag mono">04 · trajetória</p>
+        <h2>Formação e experiência</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="mono when">em andamento</span>
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p>Curso técnico na EEEP Professora Maria Célia Pinheiro Falcão. Programação em Python, desenvolvimento web, segurança de sistemas e informática.</p>
+        </li>
+        <li>
+          <span class="mono when">100 horas · certificado</span>
+          <h3>Monitor do Laboratório</h3>
+          <p>Ajudei nas atividades práticas, apoiei colegas nos exercícios e cuidei da organização do laboratório. Aprendi a explicar, liderar e trabalhar em equipe.</p>
+        </li>
+        <li>
+          <span class="mono when">sempre</span>
+          <h3>Estudo por conta própria</h3>
+          <p>Começo sem saber, pesquiso, testo e vou montando aos poucos. Foi assim que saiu o projeto de olhos digitais com OpenCV e OpenGL.</p>
+        </li>
+      </ol>
+
+      <div class="skills">
+        <h3 class="mono">ferramentas que uso</h3>
+        <ul id="skills"></ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <p class="tag mono">05 · contato</p>
+      <h2>Vamos conversar?</h2>
+      <p class="sub">Ainda estou estudando e sigo em crescente evolução. Estou aberto a novos projetos.</p>
+      <div class="cta center">
+        <a href="https://www.linkedin.com/in/guilherme-firmino-2a240137a/" target="_blank" rel="noopener" class="btn primary">Falar no LinkedIn</a>
+        <a href="https://github.com/Guilherme-Firmino" target="_blank" rel="noopener" class="btn">Ver GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mono">© <span id="ano"></span> Guilherme Firmino · feito com dedicação e muito aprendizado</footer>
+
+  <!-- MODAL -->
+  <dialog id="modal">
+    <button class="close" aria-label="Fechar">×</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
