@@ -87,15 +87,6 @@ portfolio/
 └── docs/         → prints usados neste README
 ```
 
-## 💻 Rodar no seu computador
-
-Basta abrir o `index.html` no navegador. Ou, com Python instalado:
-
-```bash
-python -m http.server
-```
-
-e acessar `http://localhost:8000`.
 
 ---
 
